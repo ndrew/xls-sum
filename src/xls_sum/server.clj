@@ -15,6 +15,7 @@
             [me.raynes.fs :as fs]
 
             [dk.ative.docjure.spreadsheet :as xls]
+            [xls-sum.excel :refer :all]
             ))
 
 
@@ -51,8 +52,10 @@
    [:body
       [:nav {:id "header"}
        [:form
+        [:h3 "Fooo"]
         [:input {:type "text" :name "path"}]
-        [:input {:type "submit" :value "↩"}]]]
+        ;[:input {:type "submit" :value "↩"}]
+        ]]
       [:div {:id "main"}
         [:aside
            [:ul   [:li "1"] [:li "2"] [:li "3"] [:li "4"] [:li "5"]]]; aside
@@ -89,11 +92,10 @@
     (let [excel (str (normalize-path path) file)
           workbook (xls/load-workbook excel)]
         
-        
         (json-response 
-            {:data excel
-             :sheets 
-                (map #(.getSheetName %) (xls/sheet-seq workbook))
+            {:file excel
+             :data (get-excel-data workbook)
+             ;:data []
              })))
 
 

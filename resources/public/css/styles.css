@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -17,26 +18,47 @@ input {
     padding: 0.7%;
 }
 
+input[type="checkbox"] {
+    margin-left: -42px;
+ /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5);
+}
+
 input[type="text"] {
     display: inline-block;
-    width: 83%;
+    width: 400px;
+    float: right;
 }
 
 input[type="submit"] {
     background: rgba(135,163,227,0.333);
     display: inline-block;
     margin: 0 1% 0 1%;
-    width: 7%;
+    width: 75px;
 }
 
 ul {
     list-style-type:none;
+    background-color: rgba(128,128,128,0.111);
+
+}
+
+ul > li > label {
+    margin-left: 44px;
+    color: blue;
+    text-decoration: underline;
 }
 
 ul > li {
+    display: inline-block;
+
     background-image:url('../excel.png');
     background-repeat:no-repeat;
-    background-position:8px 4px;
+    background-position:28px 4px;
+    
     line-height: 40px;
     padding-left: 48px;
     vertical-align: middle;
@@ -48,31 +70,37 @@ ul > li {
     border-bottom: 1px dashed rgba(128,128,128,0.333);
 }
 
-ul > li {
+h3 {
+
+    font-size: 24pt;
+    line-height: 100%;
+    vertical-align: center;
+    display: inline-block;
+    padding-left: 12px;
+    padding-top: 8px;
 }
 
 #header {
+    overflow: hidden;
     background-color: #dedddd;
     padding: 1rem 1rem 1rem 0rem;
-    text-align: center;
     width: 100%;
 }
 
 aside {
-    float: left;
-    width: 300px;
-    min-height: 450px;
+    /*float: left;
+    width: 250px;*/
+    /*min-height: 250px;*/
     padding-top: 32px;
 }
 
 #container {
-    min-height: 100%;
-    /* equal to footer height */
-    margin-bottom: 32px; 
+    /*min-height: 100%;
+    margin-bottom: 32px; */
 }
 
 #primary {
-    padding: 32px 32px 32px 300px;
-    min-width: 600px;
+    /* padding: 32px 32px 32px 300px;
+    min-width: 600px;*/
 }
 
