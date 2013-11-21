@@ -1,13 +1,13 @@
 # xls-sum
 
-A Clojure library designed to ... well, that part is up to you.
+A tool for summing (merging) several excel files into one. 
 
 ## Usage
 
-FIXME
+Launch the jar file, wait for the browser to open and follow the instructions there.
 
 ## License
 
-Copyright © 2013 FIXME
+Copyright © 2013 Andrij Sernyak
 
 Distributed under the Eclipse Public License, the same as Clojure.
