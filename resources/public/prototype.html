@@ -11,13 +11,15 @@
     <script src="/js/jquery.handsontable.full.js" type="text/javascript"></script>
 </head>
 <body>
+
 <!--
 <nav id="header">
     <form><h3>Fooo</h3><input name="path" type="text"></form>
 </nav>-->
 <div id="main">
+    <div id="dnd" style="display: none">DRAG-N-DROP HERE</div>
+        
     <aside>
-        <span id="dnd" style="display: none">DRAG-N-DROP HERE</span>
         <ul><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ul>
 
     </aside>
@@ -33,7 +35,37 @@
 
     <script>
     //alert(""); 
-    $("#dnd").show(); 
+    
+    var holder = document.getElementById("dnd");
+
+    holder.ondragover = function () { 
+        this.className = 'hover'; 
+        return false;
+    };
+
+    holder.ondragend = function () { 
+        this.className = ''; 
+        return false; 
+    };
+
+
+    holder.ondrop = function (e) {
+        debugger;
+        this.className = '';
+        e.preventDefault();
+
+        var file = e.dataTransfer.files[0], reader = new FileReader();
+        
+        reader.onload = function (event) {
+            console.log(event.target);
+            holder.style.background = 'url(' + event.target.result + ') no-repeat center';
+        };
+        
+        console.log(file);
+        reader.readAsDataURL(file);
+
+        return false;
+    };
     </script>
 </body>
 </html>

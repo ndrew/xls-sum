@@ -104,3 +104,16 @@ aside {
     min-width: 600px;*/
 }
 
+
+
+#dnd {
+    border: 10px dashed #ccc; 
+    width: 100%; 
+    height: 150px; 
+    margin: 20px auto;
+
+}
+
+#dnd.hover { 
+    border: 10px dashed #333; }
+
