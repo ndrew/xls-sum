@@ -50,18 +50,19 @@
      ] ; head
 
    [:body
-      [:nav {:id "header"}
-       [:form
-        [:h3 "Fooo"]
-        [:input {:type "text" :name "path"}]
+      ;[:nav {:id "header"}
+      ; [:form
+      ;  [:h3 "Fooo"]
+       ; [:input {:type "text" :name "path"}]
         ;[:input {:type "submit" :value "↩"}]
-        ]]
-      [:div {:id "main"}
-        [:aside
-           [:ul   [:li "1"] [:li "2"] [:li "3"] [:li "4"] [:li "5"]]]; aside
+       ; ]]
+      ;[:div 
+       ;{:id "main"}
+        ;[:aside
+        ;   [:ul   [:li "1"] [:li "2"] [:li "3"] [:li "4"] [:li "5"]]]; aside
 
       [:div {:id "primary"}
-       [:div {:id "grid"}]
+       ;[:div {:id "grid"}]
        ;[:p "Pour-over pariatur brunch banjo before they sold out. Sartorial post-ironic literally semiotics, locavore fingerstache culpa ad food truck street art fixie authentic tote bag incididunt umami. Non fingerstache dreamcatcher, synth ugh yr post-ironic disrupt Banksy commodo. Master cleanse Blue Bottle sint kale chips mumblecore pug, before they sold out gentrify enim quinoa sapiente pop-up. Aute dolor put a bird on it, deep v locavore XOXO wayfarers twee kitsch pork belly ethnic quinoa PBR&B hella sartorial. Plaid gastropub in irony. Est narwhal nesciunt ex sunt photo booth bicycle rights 90's anim, scenester sapiente Wes Anderson."]
        ;[:p "Neutra Thundercats swag artisan PBR&B. Tempor do semiotics, nostrud nulla ad actually anim locavore bespoke Vice consectetur incididunt gluten-free Portland. Gastropub Portland polaroid sriracha readymade, 8-bit sint exercitation aliqua Helvetica consequat roof party Marfa ea adipisicing. Narwhal laborum deep v asymmetrical hella fashion axe. Irure dolore fugiat drinking vinegar, blog excepteur synth farm-to-table mixtape Helvetica chambray readymade esse. Laboris Brooklyn viral VHS pug, gastropub Austin eiusmod bespoke sustainable deserunt Thundercats. Odio consectetur qui deep v."]
        ;[:p "Freegan Tumblr tote bag pickled adipisicing. Umami gastropub lo-fi, nihil letterpress Tumblr Shoreditch Carles culpa you probably haven't heard of them Marfa delectus eiusmod. Lomo pug officia, twee consequat quis magna pork belly hoodie. 3 wolf moon wayfarers PBR aesthetic butcher. Ethnic Austin raw denim, sustainable keytar scenester hoodie freegan do aliquip distillery mustache adipisicing Carles. Raw denim fugiat craft beer wayfarers, cray actually nisi do mlkshk. Keffiyeh flexitarian hella authentic, Cosby sweater umami Etsy gastropub anim drinking vinegar kogi raw denim pour-over jean shorts."]
@@ -69,7 +70,7 @@
        ] ; primary
     ] ; main
     [:script {:src "/js/grid.js"}]
-    ]
+    
    ))
 
 (defn defaults [] 

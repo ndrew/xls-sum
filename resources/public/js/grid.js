@@ -57,41 +57,43 @@ function fileClicked(file) {
     });
 }
 
-$.ajax("/init" )
-  .done(function(response) {
-    $("[name=path]").val(response.path);
-
-    var list = $("#main aside ul");
-    list.empty();
-    $.each(response.files, function(i) {
-        var li = $('<li/>').appendTo(list);
-
-        $('<label/>')
-            .text(response.files[i])
-            .appendTo(li)
-            .click(function(){
-                //checkbox.prop("checked", !checkbox.prop("checked"));
-                //fileClicked($(this).text());
-            });
-        
-        /*var checkbox = $('<input/>')
-            .attr('type', 'checkbox')
-            .click(function() {
-                fileClicked(response.files[i]);
-            })
-            .appendTo(li);
-
-        */
 
 
-        /*
-        var aaa = $('<a/>')
-            .attr("href","#")
-            //.addClass('ui-all')
-            .text(response.files[i])
-            .click(fileClicked)
-            .appendTo(li); */
-    });
+$.ajax("/init" ).done(
+    function(response) {
+        $("[name=path]").val(response.path);
+
+        var list = $("#main aside ul");
+        list.empty();
+        $.each(response.files, function(i) {
+            var li = $('<li/>').appendTo(list);
+
+            $('<label/>')
+                .text(response.files[i])
+                .appendTo(li)
+                .click(function(){
+                    //checkbox.prop("checked", !checkbox.prop("checked"));
+                    //fileClicked($(this).text());
+                });
+            
+            /*var checkbox = $('<input/>')
+                .attr('type', 'checkbox')
+                .click(function() {
+                    fileClicked(response.files[i]);
+                })
+                .appendTo(li);
+
+            */
+
+
+            /*
+            var aaa = $('<a/>')
+                .attr("href","#")
+                //.addClass('ui-all')
+                .text(response.files[i])
+                .click(fileClicked)
+                .appendTo(li); */
+        });
   })
   .fail(function() {
     alert( "error" );

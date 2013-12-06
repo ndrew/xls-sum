@@ -14,4 +14,6 @@
   :main xls-sum.core
   :ring         {:handler xls-sum.server/app-routing
                  :auto-reload? true
-                 :auto-refresh true})
+                 :auto-refresh true}
+   :jvm-opts ["-Dfile.encoding=utf-8"] 
+  )
